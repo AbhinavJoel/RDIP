@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+
+	<style type="text/css">
+
+		header{
+			margin-top: 30px;
+			margin-right: 10px;
+			margin-bottom: 15px;
+		}
+
+		h1{
+			color: #5a009c;
+			margin-right: 1px;
+			font-size: 200%;
+			text-align: right;
+		}
+
+		#logo{
+			width: 150px;
+			height: 75px;
+			margin-top: 1px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+			margin-left: 10px;
+		}
+
+		ul{
+		  	list-style-type: none;
+		    margin-top: 10px;
+			margin-bottom: 5px;
+			margin-right: 10px;
+			margin-left: 10px;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li{
+		  float: left;
+		}
+
+		li a{
+		  display: block;
+		  color: #D3D3D3;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 20px;
+		}
+
+		li a:hover{
+		  background-color: #111;
+		}
+
+		.list1{
+			padding-top: 10px;
+			  padding-bottom: 10px;
+			  padding-right: 30px;
+			  padding-left: 30px;
+		}
+
+		label{
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-top: 100px;
+			margin-bottom: 100px;
+
+		}
+
+		form{
+			margin-top: 0px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		table{
+			border-collapse: separate;
+            border-spacing: 0 1.2em;
+            font-size: 20px;
+        }
+
+		.boxbox{
+			 height: 23px;
+			 width:220px;
+			 border-radius: 6px;
+		}
+
+		.required{
+		    color: red;
+		}
+
+		#main{
+			margin-left: 10px
+		}
+
+		#button{
+			font-size: 16px;
+		}
+
+		#table1{
+			width: 47%;
+			text-align: center;
+		}
+
+		</style>
+
+</head>
+<body>
+	<header>
+		<a href="https://www.iiit.ac.in/">
+			<img src="https://www.iiit.ac.in/img/iiit-new.png" id="logo" align="left">
+		</a>
+		<a href="https://serc.iiit.ac.in/rdip" class="serc">
+			<h1 align="right" >RDIP</h2>
+		</a>
+	</header>
+	<br>
+	<br>
+	<ul>
+  		<li><a class="active" href="homepage.html">Home</a></li>
+  		<li><a href="registration.html">Registration Form</a></li>
+	</ul>
+
+	<form action="details.html" method="get" id="main">
+		<table id="table1">
+			<tr>
+				<th>
+					<label for="fname">First name:</label><br>
+				</th>
+					<th>
+						<input type="text" id="fname" name="fname" class="boxbox" placeholder="First name"  required="required">
+						<span class="required">*</span><br>
+					</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="email">E-Mail:</label><br>
+				</th>
+				<th>
+					<input type="email" id="email" name="email" class="boxbox" placeholder="xyz@abc.com" required="required"> <span class="required">*</span><br>
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="ph-no">Phone No:</label><br>
+				</th>
+				<th>
+					<input type="tel" id="ph-no" name="ph-no" class="boxbox" pattern="[0-9]{10}" placeholder="XXXXX XXXXX" required="required"> <span class="required">*</span><br>
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="gender">Gender:</label><br>
+				</th>
+				<th>
+					<input type="radio" id="gender" name="gender" required="required"> Male
+					<input type="radio" id="gender" name="gender"required="required" > Female
+					<input type="radio" id="gender" name="gender" required="required"> Other
+					<span class="required">*</span>
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="reason">Reason for RDIP:</label><br>
+				</th>
+				<th>
+					<input type="checkbox" id="reason" name="reason"> HTML
+					<input type="checkbox" id="reason" name="reason"> CSS
+					<input type="checkbox" id="reason" name="reason"> JavaScript
+					<span class="required">*</span>
+
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="college">College:</label><br>
+				</th>
+				<th>
+					<input type="text" id="college" name="college" class="boxbox" placeholder="College name" required="required"> <span class="required">*</span>
+					<br>
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+				<input type="checkbox" name="Terms" required="required">
+				</th>
+				<th>
+				<label for="checkbox"> I declare above details given by me are true.</label>
+				<span class="required">*</span>
+				</th>
+			</tr>
+
+			<tr>
+				<td>
+					<button type="Submit" id="button">Submit</button>
+
+				</td>
+				<td>
+					<button type="Reset" id="button">Reset</button>
+				</td>
+			</tr>
+
+		</table>
+
+	</form>
+
+</body>
+</html>
