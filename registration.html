@@ -125,7 +125,7 @@
   		<li><a href="registration.html">Registration Form</a></li>
 	</ul>
 
-	<form action="details.html" method="get" id="main">
+	<form name="myform" action="details.html" method="get" id="main" onsubmit = "return(validate());">
 		<table id="table1">
 			<tr>
 				<th>
@@ -148,10 +148,10 @@
 
 			<tr>
 				<th>
-					<label for="ph-no">Phone No:</label><br>
+					<label for="phonenumber">Phone No:</label><br>
 				</th>
 				<th>
-					<input type="tel" id="ph-no" name="ph-no" class="boxbox" pattern="[0-9]{10}" placeholder="XXXXX XXXXX" required="required"> <span class="required">*</span><br>
+					<input type="tel" id="phonenumber" name="num" class="boxbox"  placeholder="XXXXX XXXXX" required="required"> <span id="numloc" class="required">*</span><br>
 				</th>
 			</tr>
 
@@ -172,9 +172,9 @@
 					<label for="reason">Reason for RDIP:</label><br>
 				</th>
 				<th>
-					<input type="checkbox" id="reason" name="reason"> HTML
-					<input type="checkbox" id="reason" name="reason"> CSS
-					<input type="checkbox" id="reason" name="reason"> JavaScript
+					<input type="checkbox" id="reason" name="CHECKBOX_1"> HTML
+					<input type="checkbox" id="reason" name="CHECKBOX_2"> CSS
+					<input type="checkbox" id="reason" name="CHECKBOX_3"> JavaScript
 					<span class="required">*</span>
 
 				</th>
@@ -202,7 +202,7 @@
 
 			<tr>
 				<td>
-					<button type="Submit" id="button">Submit</button>
+					<button type="submit" value= "submit"id="button" onclick="phonenumber()"disabled="disabled">Submit</button>
 
 				</td>
 				<td>
@@ -213,6 +213,6 @@
 		</table>
 
 	</form>
-
+<script src="main1.js"> </script>
 </body>
 </html>
